@@ -34,7 +34,7 @@
 <br />
 <p align="center">
   <a href="https://dra6n.github.io/RTTTL-Keyboard/">
-    <img src="https://cdn.discordapp.com/attachments/513032175130771459/775714484366868510/chrome_2020-11-10_14-31-43.png" alt="Logo" width="500" height="350">
+    <img src="https://media.discordapp.net/attachments/1053578696793001987/1053578726803255306/image.png?width=886&height=703" alt="Logo" width="500" height="350">
   </a>
 
   <h3 align="center">Flipper Keyboard</h3>

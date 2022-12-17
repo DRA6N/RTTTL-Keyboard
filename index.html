@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="textareahelper.js"></script>
+<script src="audiosynth.js"></script>
+<script src="audiosynth.view.js"></script>
+<script src="playback.js"></script>
+<title>Flipper Keyboard</title>
+</head>
+
+<body><center>
+
+<div class="title"><img src="img/logo.png">
+  <div class="btn btn-primary tooltip"><img src="img/info.png" width="20px">
+    <div class="bottom">
+        <h3>How to use this tool</h3>
+        <p>Simply use your PC keyboard to play the tune you'd like.<br><br>        
+As you play, the app will type the RTTTL code used by the Flipper, in the textbox below.<br><br>
+<u>Key Bindings:</u><br>
+<b>ESC</b> - Clear all notes<br>
+<b>DEL/BACKSPACE</b> - Delete Last Note<br>
+<b>ENTER</b> - Play Back Notes<br>
+<b>Left/Right Arrow</b> - Octave Down/Up</p>
+        <i></i>
+    </div>
+</div>
+</div>
+<center>
+
+<center>
+<img src="img/bar2.png"><br>
+<div class="keyboard-options">
+<p>Instrument
+  <select ID="sound">
+    <option value="0" selected>Keyboard</option>
+    <option value="1">Organ</option>
+    <option value="2">Acoustic Guitar</option>
+
+  </select>
+</p>
+
+<div ID="keyboard" class="keyboard-holder"></div>
+<div class="keyboard-options">
+  <font size="5" color="red">Note: Flipper will <b>only</b> play notes from C3-D7#!</font><br><br>
+Range [C<span ID="OCTAVE_LOWER">4</span>-B<span ID="OCTAVE_UPPER">6</span>]
+<input type="button" ID="-_OCTAVE" value="-" />
+<input type="button" ID="+_OCTAVE" value="+" /><br />
+<i>(Use left/right arrows to adjust with keyboard)</i>
+</div>
+<script type="text/javascript">
+
+var a = new AudioSynthView();
+a.draw();
+
+</script>
+<div style="text-align: center;">
+
+<div>
+<textarea class="scrollabletextbox" value="" id="textoutput">
+</textarea><br>
+<button onclick="removeNote()">Delete Last Note</button>&nbsp;<input type="button" id="copyID" value="Copy to Clipboard" />
+    <script type="text/javascript">
+        var button = document.getElementById("copyID"),
+            input = document.getElementById("textoutput");
+
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            input.select();
+            document.execCommand("copy");
+        });
+    </script>
+
+<button onclick="clearPlayedNotes()">Clear</button>
+<button onclick="doPlayback(0)">Play it back!</button>
+</div>
+  <br><br>
+  <img src="img/bar2.png">
+  <H2>Documentation</H2>
+  <p>The Music Note format is [Note][Octave] [Length]</p>
+  <p>Valid Music Notes are: C, C#(Db), D, D#(Eb), E, F, F#(Gb), G, G#(Ab), A, A#(Bb), B
+    <br>
+    Remark: Notes with &ldquo;b&rdquo; in brackets are synonyms for the previous Notes with &ldquo;#&rdquo;. So, "C#" has the same frequency value as "Db".    </p>
+  <p>Valid Octaves are: 4, 5, 6, 7    </p>
+  <p>Valid Note length are: 1/1, 1/2, 1/4, 1/8 (1/1 Note length equals 0.5s time length).</p>
+  <p> Beside of the Notes there is a Pause = silence
+    <br>
+    Music Pause format = P[Length]
+    <br>
+    Valid Pause values: P 1/1, P 1/2, P 1/4, P 1/8, P 1/16, P 1/32, P 1/64, P 1/128    </p>
+  <p>The individual Note/Pause Length will be scaled with the &ldquo;Gen. length&rdquo; value. Value 8 is neutral.</p>
+  <p> The numerator "1/&rdquo; for length values and spaces in script text are optional, so "A42" equals "A4 1/2" and "P128" equals "P 1/128".    </p>
+  <p>Unchecking &ldquo;Show 1/x for length&rdquo; will hide the numerators in the script text.    <br>
+    Unchecking &ldquo;Show Spaces&rdquo; will hide spaces the script text.</p>
+  <p> A Click on the green &ldquo;Play&rdquo; button of the MediaPlayer will check the script for errors, generate a wav file (&ldquo;TestMusic.wav&rdquo;) in the \Music subfolder and plays it through the soundcard.<br>
+Because the wave file consists of sine waves, its sound is different from the sound of the motors, but sufficient to generate a realistic impression of the music. </p>
+  <p>The &ldquo;Script File Manger&rdquo; may help to organize a Music archive in the \Music subfolder. Script files can be saved here as txt files, which can be easily shared.
+    <br>
+    <strong>A Script consists of up to 48 Music Notes - <em>including</em> spaces.</strong></p>
+  <p>Due to the individual programmability, each ESC can have its own music data, so multiple ESCs are theoretically able to play a polyphonic music.</p>
+</div>
+<hr>
+Developed by <a href="https://discordapp.com/users/153850946127003648/"><B>Vishera</B></a><br><a href="https://discord.gg/flipper"><B>Check out the Discord!</B></a>
+</body>
+</html>

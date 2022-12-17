@@ -33,20 +33,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/DRA6N/blhelikeyboard.github.io">
+  <a href="https://dra6n.github.io/RTTTL-Keyboard/">
     <img src="https://cdn.discordapp.com/attachments/513032175130771459/775714484366868510/chrome_2020-11-10_14-31-43.png" alt="Logo" width="500" height="350">
   </a>
 
-  <h3 align="center">BlHeli Keyboard</h3>
+  <h3 align="center">Flipper Keyboard</h3>
 
   <p align="center">
-    An online music generator for BlHeli_32 ESC's
+    A musical PC keyboard you can make music with for your Flipper Zero!
     <br />
-    <a href="https://dra6n.github.io/blhelikeyboard.github.io/"><strong>Try it out! »</strong></a>
+    <a href="https://dra6n.github.io/RTTTL-Keyboard/"><strong>Try it out! »</strong></a>
     <br />
-    <a href="https://github.com/DRA6N/blhelikeyboard.github.io/issues">Report Bug</a>
+    <a href="https://github.com/DRA6N/RTTTL-Keyboard/issues">Report Bug</a>
     ·
-    <a href="https://github.com/DRA6N/blhelikeyboard.github.io/issues">Request Feature</a>
+    <a href="https://github.com/DRA6N/RTTTL-Keyboard/issues">Request Feature</a>
   </p>
 </p>
 
@@ -81,12 +81,12 @@ Follow the guide on the website!
 
 If you need a feature right on the spot now please create a fork of this project and help us make your idea a reality and make this project evolve quicker!
 
-Nontheless to request a feature, please head over to <a href="https://github.com/DRA6N/blhelikeyboard.github.io/issues">Issues & Feature Requests</a> and create an issue labeled: "[FEATURE REQUEST] Quick description" and write a very detailed description and we might develop on it if we think it suits the project.
+Nontheless to request a feature, please head over to <a href="https://github.com/DRA6N/RTTTL-Keyboard/issues">Issues & Feature Requests</a> and create an issue labeled: "[FEATURE REQUEST] Quick description" and write a very detailed description and we might develop on it if we think it suits the project.
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/DRA6N/blhelikeyboard.github.io/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/DRA6N/RTTTL-Keyboard/issues) for a list of proposed features (and known issues).
 
 
 
@@ -115,9 +115,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Main Developer (Discord Link):
 <a href=https://discordapp.com/users/153850946127003648/>Vishera</a>
-
-Co-Developer (Discord Link):
-<a href="https://discordapp.com/users/132817887663620096/">CheetahFPV</a>
 
 Project Link: [https://github.com/DRA6N/blhelikeyboard.github.io](https://github.com/DRA6N/blhelikeyboard.github.io)
 
